@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoofMatch - Find Trusted Roofing Contractors</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#25609C',
+                        secondary: '#CA2F3C'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+
+</head>
+        <div class="flex justify-between items-center h-20 md:h-24 bg-white shadow-sm border-b border-slate-200 pl-6">
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img src="assets/images/logo.png" class="h-20 md:h-24 w-auto object-contain" alt="Roofing Contractors">
+    </div>
+
+
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#companies" class="text-primary hover:text-secondary transition-colors">Find Contractors</a>
+                    <a href="#reviews" class="text-primary hover:text-secondary transition-colors">Reviews</a>
+                    <a href="#process" class="text-primary hover:text-secondary transition-colors">How It Works</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <a href="#booking" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                        Get Started
+                    </a>
+                    <button class="hamburger z-50">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                <!-- Desktop Get Started Button -->
+                <a href="#booking" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+                    Get Started
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-xl z-40 p-6 md:hidden">
+            <div class="flex flex-col space-y-6 mt-8">
+                <a href="#companies" class="text-lg font-medium text-primary hover:text-secondary transition-colors py-2">Find Contractors</a>
+                <a href="#reviews" class="text-lg font-medium text-primary hover:text-secondary transition-colors py-2">Reviews</a>
+                <a href="#process" class="text-lg font-medium text-primary hover:text-secondary transition-colors py-2">How It Works</a>
+                <div class="pt-4 border-t border-slate-200">
+                    <a href="#booking" class="block w-full bg-primary text-white text-center py-3 !rounded-button hover:bg-blue-700 transition-colors">
+                        Get Free Quotes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <section class="hero-bg min-h-[90vh] flex items-start relative pt-16 md:pt-24">
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent md:block"></div>
+
+    <div class="w-full relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-0">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div class="space-y-6 md:space-y-8">
+                    
+                    <!-- Heading & Paragraph -->
+                    <div class="space-y-4 md:space-y-6">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                            Find Trusted <span class="text-primary whitespace-nowrap">Roofing Contractors</span> in Your Area
+                        </h1>
+                        <p class="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
+                            Connect with vetted local roofing professionals. Get multiple free quotes, compare services, and choose the best contractor for your project.
+                        </p>
+                    </div>
+
+                    <!-- Form Card -->
+                    <div class="bg-transparent p-8 md:p-8 rounded-xl shadow-xl border border-slate-900 -mt-4 md:-mt-6">
+                        <h3 class="text-xl md:text-2xl font-semibold text-slate-900 mb-4 md:mb-6">Get Free Quotes Today</h3>
+
+                        <!-- Formspree Form -->
+                        <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <input type="text" name="name" placeholder="Full Name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" required>
+                                <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" required>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <input type="tel" name="phone" placeholder="Phone Number" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+                                <input type="text" name="zip" placeholder="ZIP Code" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+                            </div>
+                            <div>
+                                <textarea name="message" placeholder="Describe your roofing project..." rows="3" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none" required></textarea>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="captcha-box w-16 h-16 bg-slate-100 border-2 border-slate-300 rounded-lg flex items-center justify-center">
+                                    <div class="w-6 h-6 flex items-center justify-center">
+                                        <i class="ri-checkbox-blank-line text-slate-400"></i>
+                                    </div>
+                                </div>
+                                <span class="text-sm text-slate-900">I'm not a robot</span>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-4 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+                                Get My Free Quotes
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Optional Right Column for Image -->
+                <div class="hidden lg:block">
+                    <!-- Add hero image or illustration here if needed -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="text-center space-y-3 md:space-y-4 p-4 md:p-0">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <i class="ri-shield-check-line text-primary text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-slate-900">Vetted Contractors</h3>
+                    <p class="text-sm md:text-base text-slate-600">All contractors are licensed, insured, and background checked</p>
+                </div>
+                <div class="text-center space-y-3 md:space-y-4 p-4 md:p-0">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <i class="ri-money-dollar-circle-line text-primary text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-slate-900">Free Estimates</h3>
+                    <p class="text-sm md:text-base text-slate-600">Get multiple quotes at no cost to compare prices and services</p>
+                </div>
+                <div class="text-center space-y-3 md:space-y-4 p-4 md:p-0">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <i class="ri-time-line text-primary text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-slate-900">Quick Response</h3>
+                    <p class="text-sm md:text-base text-slate-600">Contractors respond within 24 hours with detailed proposals</p>
+                </div>
+                <div class="text-center space-y-3 md:space-y-4 p-4 md:p-0">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <i class="ri-hand-heart-line text-primary text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-slate-900">No Obligation</h3>
+                    <p class="text-sm md:text-base text-slate-600">Compare quotes and choose the best fit with no pressure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="companies" class="py-12 md:py-20 texture-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4">Featured Roofing Contractors</h2>
+                <p class="text-base md:text-xl text-slate-600">Connect with top-rated professionals in your area</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Elite Roofing Solutions</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">4.9 (127 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>15+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves Dallas, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Residential & Commercial</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Premier Roof Masters</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-half-line text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">4.7 (89 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>12+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves Houston, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Storm Damage Specialists</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Apex Roofing Group</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">5.0 (64 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>8+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves Austin, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Solar & Green Roofing</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Reliable Roofing Co.</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-line text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">4.6 (156 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>20+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves San Antonio, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Insurance Claims Expert</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Skyline Roofing Pros</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-half-line text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">4.8 (203 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>18+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves Fort Worth, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Metal & Tile Specialists</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-4 md:p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="ri-building-line text-primary text-lg md:text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-sm md:text-base">Guardian Roof Systems</h3>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                    <i class="ri-star-fill text-xs md:text-sm"></i>
+                                </div>
+                                <span class="text-xs md:text-sm text-slate-600">4.9 (91 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span>10+ years experience</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Serves Plano, TX area</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-600">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <span>Emergency Repairs 24/7</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap text-sm">
+                            <div class="w-4 h-4 inline-flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            Call Now
+                        </button>
+                        <button class="px-4 py-2 border border-slate-300 !rounded-button hover:bg-slate-50 transition-colors whitespace-nowrap text-sm">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 md:mt-12">
+                <button class="bg-white text-primary border-2 border-primary px-6 py-3 md:px-8 md:py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap text-sm md:text-base">
+                    View All Contractors
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-12 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4">What Our Customers Say</h2>
+                <p class="text-base md:text-xl text-slate-600">Real reviews from homeowners who found their perfect roofing contractor</p>
+            </div>
+
+            <div class="testimonial-slider relative overflow-hidden">
+                <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
+                    <div class="testimonial-slide flex-shrink-0 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "RoofMatch connected me with Elite Roofing Solutions, and I couldn't be happier. They replaced my entire roof after storm damage, and the quality is outstanding. The process was seamless from start to finish."
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                <img src="assets/images/img1.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                <div>
+                                    <div class="font-semibold text-slate-900 text-sm md:text-base">Sarah Johnson</div>
+                                    <div class="text-xs md:text-sm text-slate-600">Dallas, TX</div>
+                                </div>
+                            
+
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "I got three quotes through RoofMatch and saved over $3,000 compared to the first contractor I called. Premier Roof Masters did an excellent job, and their warranty gave me peace of mind."
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                     <img src="assets/images/img2.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                    <div>
+                                        <div class="font-semibold text-slate-900 text-sm md:text-base">Michael Chen</div>
+                                        <div class="text-xs md:text-sm text-slate-600">Houston, TX</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "The contractors on RoofMatch are top-notch. Apex Roofing Group installed solar panels with our new roof, and the energy savings are already noticeable. Highly recommend this service!"
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                   <img src="assets/images/img4.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                    <div>
+                                        <div class="font-semibold text-slate-900 text-sm md:text-base">Emily Rodriguez</div>
+                                        <div class="text-xs md:text-sm text-slate-600">Austin, TX</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide flex-shrink-0 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "After a hailstorm damaged our roof, RoofMatch helped us find Reliable Roofing Co. They handled the insurance claim process and got our roof replaced quickly. Professional service from start to finish."
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <img src="assets/images/img3.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                    <div>
+                                        <div class="font-semibold text-slate-900 text-sm md:text-base">Robert Williams</div>
+                                        <div class="text-xs md:text-sm text-slate-600">San Antonio, TX</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "Skyline Roofing Pros exceeded our expectations. The metal roof they installed looks amazing and should last for decades. The crew was professional, clean, and finished ahead of schedule."
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <img src="assets/images/img5.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                    <div>
+                                        <div class="font-semibold text-slate-900 text-sm md:text-base">Lisa Thompson</div>
+                                        <div class="text-xs md:text-sm text-slate-600">Fort Worth, TX</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-50 rounded-xl p-6 md:p-8 border border-slate-200">
+                                <div class="flex items-center space-x-1 mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 mb-6 leading-relaxed text-sm md:text-base">
+                                    "Guardian Roof Systems came out for an emergency repair at 2 AM during a storm. Their 24/7 service saved our home from major water damage. Truly reliable and professional contractors."
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                   <img src="assets/images/img6.jpg" alt="Customer" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover object-top">
+                                    <div>
+                                        <div class="font-semibold text-slate-900 text-sm md:text-base">David Martinez</div>
+                                        <div class="text-xs md:text-sm text-slate-600">Plano, TX</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-6 md:mt-8">
+                    <button class="testimonial-prev w-10 h-10 md:w-12 md:h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <div class="w-4 h-4 md:w-6 md:h-6 flex items-center justify-center">
+                            <i class="ri-arrow-left-line"></i>
+                        </div>
+                    </button>
+                    <button class="testimonial-next w-10 h-10 md:w-12 md:h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <div class="w-4 h-4 md:w-6 md:h-6 flex items-center justify-center">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-12 md:py-20 texture-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4">How It Works</h2>
+                <p class="text-base md:text-xl text-slate-600">Get matched with qualified roofing contractors in three simple steps</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+                <div class="text-center space-y-4 md:space-y-6">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+                                <i class="ri-edit-line text-white text-2xl md:text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-primary text-primary font-bold">
+                            1
+                        </div>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-slate-900">Submit Your Request</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        Fill out our simple form with your project details, location, and contact information. It takes less than 2 minutes to complete.
+                    </p>
+                </div>
+
+                <div class="text-center space-y-4 md:space-y-6">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+                                <i class="ri-team-line text-white text-2xl md:text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-primary text-primary font-bold">
+                            2
+                        </div>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-slate-900">Get Matched with Contractors</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        We connect you with up to 4 pre-screened, licensed contractors in your area who specialize in your type of roofing project.
+                    </p>
+                </div>
+
+                <div class="text-center space-y-4 md:space-y-6">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+                                <i class="ri-thumb-up-line text-white text-2xl md:text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-primary text-primary font-bold">
+                            3
+                        </div>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-slate-900">Compare & Choose</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        Review quotes, compare services and pricing, read reviews, and select the contractor that best fits your needs and budget.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 md:mt-16">
+                <button class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 !rounded-button text-base md:text-lg hover:bg-blue-700 transition-colors whitespace-nowrap">
+                    Start Your Project Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+   <section id="booking" class="py-12 md:py-20 bg-primary">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">Ready to Get Started?</h2>
+    <p class="text-base md:text-xl text-blue-100 mb-8 md:mb-12">
+      Join thousands of homeowners who have found their perfect roofing contractor through RoofMatch
+    </p>
+
+    <div class="bg-white rounded-xl p-4 md:p-8 shadow-2xl">
+      <h3 class="text-xl md:text-2xl font-semibold text-slate-900 mb-4 md:mb-6">Get Your Free Quotes Now</h3>
+      <form class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          />
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          />
+          <input
+            type="text"
+            placeholder="ZIP Code"
+            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          />
+        </div>
+        <textarea
+          placeholder="Describe your roofing project..."
+          rows="3"
+          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none"
+        ></textarea>
+
+        <div class="flex items-center justify-center space-x-3">
+          <div
+            class="captcha-box w-12 h-12 md:w-16 md:h-16 bg-slate-100 border-2 border-slate-300 rounded-lg flex items-center justify-center cursor-pointer"
+          >
+            <div class="w-4 h-4 md:w-6 md:h-6 flex items-center justify-center">
+              <i class="ri-checkbox-blank-line text-slate-400"></i>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-slate-600">I'm not a robot</span>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-primary text-white py-3 md:py-4 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap text-sm md:text-base"
+        >
+          Get My Free Quotes
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-slate-900 text-white py-8 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Logo + Description + Social -->
+            <div class="space-y-6">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="assets/images/logo1.png" class="h-16 md:h-20 lg:h-24 w-auto object-contain" alt="Roofing Contractors">
+                </div>
+
+                <!-- Description -->
+                <p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                    Connecting homeowners with trusted roofing contractors across the United States. Quality work, competitive pricing, guaranteed satisfaction.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-facebook-fill text-sm md:text-base"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-twitter-fill text-sm md:text-base"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-linkedin-fill text-sm md:text-base"></i>
+                    </a>
+                </div>
+            </div>
+
+                <div>
+                    <h4 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Services</h4>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Roof Replacement</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Roof Repair</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Storm Damage</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Insurance Claims</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Solar Installation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Company</h4>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">How It Works</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Contractor Network</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Support</h4>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors text-sm md:text-base">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 mt-8 md:mt-12 pt-8 text-center text-slate-400 text-sm md:text-base">
+                <p>&copy; 2025 RoofMatch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
